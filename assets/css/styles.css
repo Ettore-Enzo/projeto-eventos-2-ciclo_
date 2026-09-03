@@ -4,6 +4,8 @@
     --text-white: #fff;
     --bg-button: #333;
     --bg-hero: #222;
+    --pink-primary: #e20543;
+    --pink-secondary: #bf09cf;
 }
 
 * {
@@ -63,12 +65,39 @@
 
     .title {
         color: var(--text-white);
+        margin-bottom: 15px;
 
         .highlight {
-            background-image: linear-gradient(to left, #bf09cf, #e20543);
+            background-image: linear-gradient(to left, var(--pink-primary), var(--pink-secondary));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .description {
+        color: var(--text-gray);
+        margin-bottom: 25px;
+    }
+
+    .search {
+        border-radius: 30px;
+        padding: 10px 15px;
+        background-color: var(--bg-button);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: var(--text-white);
+        outline: none;
+        transition: 0.2s;
+
+        max-width: 50%;
+        width: 100%;
+
+        &::placeholder {
+            color: var(--text-gray);
+        }
+
+        &:focus {
+            border-color: var(--pink-primary);
         }
     }
 }
