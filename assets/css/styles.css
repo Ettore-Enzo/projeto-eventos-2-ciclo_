@@ -115,15 +115,27 @@
         .filter-list {
             display: flex;
             list-style: none;
-            gap: 15px;
+            gap: 5px;
 
             .item {
                 padding: 5px 10px;
                 border: 1px solid var(--border-light);
                 border-radius: 20px;
                 font-size: 11px;
-                color: var(--text-white);
+                color: var(--text-gray);
                 cursor: pointer;
+                transition: 0.3s;
+
+                &.active {
+                    background-color: var(--pink-primary);
+                    border-color: var(--pink-primary);
+                    color: var(--text-white);
+                }
+
+                &:hover {
+                    color: var(--text-white);
+                    border-color: var(--pink-primary);
+                }
             }
         }
     }
