@@ -63,5 +63,12 @@
 
     .title {
         color: var(--text-white);
+
+        .highlight {
+            background-image: linear-gradient(to left, #bf09cf, #e20543);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 }
